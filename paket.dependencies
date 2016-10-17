@@ -1,0 +1,4 @@
+source https://nuget.org/api/v2
+
+nuget fsharp.formatting
+nuget FSharp.Formatting.CommandTool
