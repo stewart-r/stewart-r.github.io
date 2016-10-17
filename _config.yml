@@ -6,10 +6,10 @@ highlighter:      pygments
 permalink:        pretty
 
 # Setup
-title:            Hyde
+title:            Stewart Robertson
 tagline:          'My Blog'
 description:      'My blog'
-url:              http://hyde.getpoole.com
+url:              http://stewart-r.github.io
 baseurl:          /
 
 author:
