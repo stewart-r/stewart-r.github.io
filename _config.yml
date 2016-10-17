@@ -1,0 +1,31 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Hyde
+tagline:          'My Blog'
+description:      'My blog'
+url:              http://hyde.getpoole.com
+baseurl:          /
+
+author:
+  name:           'Stewart Robertson'
+  url:            https://twitter.com/stewrobertson79
+
+paginate:         5
+paginate_path:    "page:num"
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
+
+# Gems
+gems:             
+  - jekyll-paginate
+  - jekyll-gist
