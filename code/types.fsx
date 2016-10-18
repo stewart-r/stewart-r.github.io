@@ -7,10 +7,10 @@ type FrontMatter = {
     Layout:string
 }
 
-fsi.AddHtmlPrinter(fun (h:FrontMatter) ->
-  seq [], (sprintf """
-  ---
-  title: %s
-  layout: %s
-  ---
-  """ h.Title h.Layout))
+// fsi.AddHtmlPrinter(fun (h:FrontMatter) ->
+//   seq [], (sprintf """
+//   ---
+//   title: %s
+//   layout: %s
+//   ---
+//   """ h.Title h.Layout))

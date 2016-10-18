@@ -1,10 +1,8 @@
 ---
 layout: page
-title: test post
+title: Second
 ---
 
 
-test
-====
 
 post 1

@@ -25,9 +25,13 @@ let getNewFname oldFname =
     |> (fun s -> s.Replace(".fsx",".html"))
     |> (fun s -> Path.Combine(postsDir,s))
 
+let myFsi = new FsiEvaluator()
+
 Target "BuildPosts" (fun _ ->
+    
+
     Directory.GetFiles(entriesDir) 
-    |> Seq.iter (fun x -> Literate.ProcessScriptFile(x, output = (getNewFname x)))
+    |> Seq.iter (fun x -> Literate.ProcessScriptFile(x, output = (getNewFname x), fsiEvaluator = myFsi))
 )
 
 
