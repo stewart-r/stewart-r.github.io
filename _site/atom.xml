@@ -4,7 +4,7 @@
  <title>Stewart Robertson</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2016-10-18T23:10:45+01:00</updated>
+ <updated>2016-10-19T00:06:16+01:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Stewart Robertson</name>
@@ -18,6 +18,9 @@
    <updated>2016-10-15T00:00:00+01:00</updated>
    <id>http://localhost:4000/2016/10/15/D3-Network-Diagrams-in-F#</id>
    <content type="html">&lt;h2&gt;Some Markdown&lt;/h2&gt;
+&lt;p&gt;If you prefer to use F# Formatting tools via the command line, you can use the &lt;code&gt;FSharp.Formatting.CommandTool&lt;/code&gt; package, which includes an executable &lt;code&gt;fsformatting.exe&lt;/code&gt;
+that gives you access to the most important functionality via a simple command line interface. This might be a good idea if you prefer to run F# Formatting as a
+separate process, e.g. for resource management reasons.&lt;/p&gt;
 
 
 &lt;div class=&quot;tip&quot; id=&quot;fs1&quot;&gt;module Blog&lt;/div&gt;
