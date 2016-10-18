@@ -2,10 +2,14 @@
 #I "packages/FAKE/tools"
 #r "packages/FAKE/tools/FakeLib.dll"
 #load "packages/FSharp.Formatting/FSharp.Formatting.fsx"
+#load "code/types.fsx"
 
 open Fake
 open FSharp.Literate
 open System.IO
+open System
+
+open FSharp.Markdown
 
 
 let siteDir = "_site"
@@ -25,12 +29,27 @@ let getNewFname oldFname =
     |> (fun s -> s.Replace(".fsx",".html"))
     |> (fun s -> Path.Combine(postsDir,s))
 
-let myFsi = new FsiEvaluator()
+let fsi = 
+    let ret = new FsiEvaluator()
+    ret.RegisterTransformation(fun (o,ty) ->
+        if (ty.ToString().Contains("FrontMatter"))
+        then
+            let layout = ty.GetProperty("Layout").GetValue(o) :?> string
+            let title = ty.GetProperty("Title").GetValue(o) :?> string
+            let raw =  (sprintf 
+"""---
+title: %s
+layout: %s
+---"""                  title layout)
+            Some [InlineBlock(raw)]
+
+        else None)
+    ret
 
 Target "BuildPosts" (fun _ ->
     
     Directory.GetFiles(entriesDir) 
-    |> Seq.iter (fun x -> Literate.ProcessScriptFile(x, output = (getNewFname x), fsiEvaluator = myFsi))
+    |> Seq.iter (fun x -> Literate.ProcessScriptFile(x, output = (getNewFname x), fsiEvaluator = fsi))
 )
 
 

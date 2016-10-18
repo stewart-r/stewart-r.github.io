@@ -1,20 +1,4 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @stewart-r
- Watch 31
-  Star 242
-  Fork 104 tpetricek/FSharp.Formatting
- Code  Issues 68  Pull requests 3  Projects 0  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathFSharp.Formatting/src/FSharp.CodeFormat/files/style.css
-b6a2ba9  on 15 May
-@rmunn rmunn Fix tooltip flickering in CSS
-2 contributors @tpetricek @rmunn
-RawBlameHistory    
-88 lines (81 sloc)  1.59 KB
+
 /* identifier */
 span.i { color:#000000; }
 /* comment */
@@ -301,4 +285,16 @@ td.title, thead {
   border-style:none;
   color: #e0e0e0;
   margin-top:15px;
+}
+
+.sidebar{
+  background-color: #1F0600
+}
+
+.sidebar-about > h1{
+  font-size: 2pc;
+}
+
+.img-circle{
+  border-radius: 50%;
 }

@@ -4,7 +4,7 @@
  <title>Stewart Robertson</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2016-10-18T07:26:38+01:00</updated>
+ <updated>2016-10-18T19:55:54+01:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Stewart Robertson</name>
@@ -13,28 +13,17 @@
 
  
  <entry>
-   <title>First Entry</title>
-   <link href="http://localhost:4000/2016/10/15/first-entry/"/>
+   <title>D3 Network (Force Layout) Diagrams in F#</title>
+   <link href="http://localhost:4000/2016/10/15/D3-Network-Diagrams-in-F/"/>
    <updated>2016-10-15T00:00:00+01:00</updated>
-   <id>http://localhost:4000/2016/10/15/first-entry</id>
+   <id>http://localhost:4000/2016/10/15/D3-Network-Diagrams-in-F#</id>
    <content type="html">&lt;h2&gt;Some Markdown&lt;/h2&gt;
 &lt;p&gt;boom de boom&lt;/p&gt;
 &lt;p&gt;Some other stuff&lt;/p&gt;
-&lt;table class=&quot;pre&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;pre&gt;&lt;code&gt;1&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 
 &lt;div class=&quot;tip&quot; id=&quot;fs1&quot;&gt;module Blog&lt;/div&gt;
-&lt;div class=&quot;tip&quot; id=&quot;fs2&quot;&gt;val frontmatter : FrontMatter&lt;br /&gt;&lt;br /&gt;Full name: 2016-10-15-first-entry.frontmatter&lt;/div&gt;
-&lt;div class=&quot;tip&quot; id=&quot;fs3&quot;&gt;val c : int&lt;br /&gt;&lt;br /&gt;Full name: 2016-10-15-first-entry.c&lt;/div&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Second</title>
-   <link href="http://localhost:4000/2016/01/01/my-most/"/>
-   <updated>2016-01-01T00:00:00+00:00</updated>
-   <id>http://localhost:4000/2016/01/01/my-most</id>
-   <content type="html">&lt;p&gt;post 1&lt;/p&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs2&quot;&gt;val frontmatter : FrontMatter&lt;br /&gt;&lt;br /&gt;Full name: 2016-10-15-D3-Network-Diagrams-in-F#.frontmatter&lt;/div&gt;
 </content>
  </entry>
  
