@@ -4,7 +4,7 @@
  <title>Stewart Robertson</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2016-10-18T19:55:54+01:00</updated>
+ <updated>2016-10-18T23:10:45+01:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Stewart Robertson</name>
@@ -18,8 +18,6 @@
    <updated>2016-10-15T00:00:00+01:00</updated>
    <id>http://localhost:4000/2016/10/15/D3-Network-Diagrams-in-F#</id>
    <content type="html">&lt;h2&gt;Some Markdown&lt;/h2&gt;
-&lt;p&gt;boom de boom&lt;/p&gt;
-&lt;p&gt;Some other stuff&lt;/p&gt;
 
 
 &lt;div class=&quot;tip&quot; id=&quot;fs1&quot;&gt;module Blog&lt;/div&gt;

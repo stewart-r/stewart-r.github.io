@@ -13,13 +13,6 @@ frontmatter
 Some Markdown
 -------------
 
-boom de boom
-*)
 
-
-
-
-(**
-Some other stuff
 *)
 
