@@ -4,7 +4,7 @@
  <title>Stewart Robertson</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2016-10-18T01:18:24+01:00</updated>
+ <updated>2016-10-18T07:26:38+01:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Stewart Robertson</name>
@@ -20,13 +20,7 @@
    <content type="html">&lt;h2&gt;Some Markdown&lt;/h2&gt;
 &lt;p&gt;boom de boom&lt;/p&gt;
 &lt;p&gt;Some other stuff&lt;/p&gt;
-&lt;table class=&quot;pre&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;pre&gt;&lt;code&gt;No value has been returned&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;table class=&quot;pre&quot;&gt;&lt;tr&gt;&lt;td class=&quot;lines&quot;&gt;&lt;pre class=&quot;fssnip&quot;&gt;&lt;span class=&quot;l&quot;&gt;1: &lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&quot;snippet&quot;&gt;&lt;pre class=&quot;fssnip highlighted&quot;&gt;&lt;code lang=&quot;fsharp&quot;&gt;&lt;span onmouseout=&quot;hideTip(event, 'fs3', 4)&quot; onmouseover=&quot;showTip(event, 'fs3', 4)&quot; class=&quot;i&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
+&lt;table class=&quot;pre&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;pre&gt;&lt;code&gt;1&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 
 &lt;div class=&quot;tip&quot; id=&quot;fs1&quot;&gt;module Blog&lt;/div&gt;

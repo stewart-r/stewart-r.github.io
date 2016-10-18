@@ -29,7 +29,6 @@ let myFsi = new FsiEvaluator()
 
 Target "BuildPosts" (fun _ ->
     
-
     Directory.GetFiles(entriesDir) 
     |> Seq.iter (fun x -> Literate.ProcessScriptFile(x, output = (getNewFname x), fsiEvaluator = myFsi))
 )
