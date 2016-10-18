@@ -41,11 +41,6 @@ div.tip
 	pointer-events:none;
 }
 
-h2
-{
-	font:bold 16pt 'calibri';
-}
-
 pre a.fssniplink
 {
 	font:bold 7.5pt calibry, arial, verdana; 
@@ -306,8 +301,31 @@ body p {
   line-height: 20px;
 }
 
-code {
+p > code {
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   color: #d14;
+}
+
+
+h1,h2,h3,h4 {
+  font-weight: unset;
+}
+
+h2{
+  font-size:1.25em; 
+  
+}
+
+h3{
+  font-size: 1.1em;
+  font-weight: bold;
+}
+h4{
+  font-size: 1em;
+  
+}
+
+pre > tbody tr td, tbody tr th {
+     background-color:darkred;
 }
