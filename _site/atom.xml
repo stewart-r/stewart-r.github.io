@@ -4,7 +4,7 @@
  <title>Stewart Robertson</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2016-10-19T00:53:20+01:00</updated>
+ <updated>2016-10-19T07:28:31+01:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Stewart Robertson</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>D3 Network (Force Layout) Diagrams in F#</title>
+   <title>D3 Network Graphs in F#</title>
    <link href="http://localhost:4000/2016/10/15/D3-Network-Diagrams-in-F/"/>
    <updated>2016-10-15T00:00:00+01:00</updated>
    <id>http://localhost:4000/2016/10/15/D3-Network-Diagrams-in-F#</id>
