@@ -39,8 +39,6 @@
     <Assembly Location="/home/stewart/source/repos/stewart-r.github.io/packages/Suave/lib/net40/Suave.dll" FullName="Suave, Version=1.1.3.0, Culture=neutral, PublicKeyToken=null" Version="1.1.3.0" />
     <Assembly Location="/home/stewart/source/repos/stewart-r.github.io/packages/MathNet.Numerics/lib/net40/MathNet.Numerics.dll" FullName="MathNet.Numerics, Version=3.12.0.0, Culture=neutral, PublicKeyToken=null" Version="3.12.0.0" />
     <Assembly Location="/home/stewart/source/repos/stewart-r.github.io/packages/FSharp.Data/lib/net40/FSharp.Data.dll" FullName="FSharp.Data, Version=2.3.1.0, Culture=neutral, PublicKeyToken=null" Version="2.3.1.0" />
-    <Assembly Location="/home/stewart/source/repos/stewart-r.github.io/packages/DynamicInterop/lib/net40/DynamicInterop.dll" FullName="DynamicInterop, Version=0.7.4.0, Culture=neutral, PublicKeyToken=null" Version="0.7.4.0" />
-    <Assembly Location="/usr/lib/mono/gac/System.Data/4.0.0.0__b77a5c561934e089/System.Data.dll" FullName="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Version="4.0.0.0" />
     <Assembly Location="/usr/lib/mono/gac/System.Web/4.0.0.0__b03f5f7f11d50a3a/System.Web.dll" FullName="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Version="4.0.0.0" />
     <Assembly Location="/home/stewart/source/repos/stewart-r.github.io/packages/FSharp.Formatting/lib/net40/RazorEngine.dll" FullName="RazorEngine, Version=3.7.7.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a" Version="3.7.7.0" />
     <Assembly Location="/home/stewart/source/repos/stewart-r.github.io/packages/FAKE/tools/Mono.Cecil.dll" FullName="Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" Version="0.9.6.0" />

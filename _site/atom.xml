@@ -4,7 +4,7 @@
  <title>Stewart Robertson</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2016-10-19T07:28:31+01:00</updated>
+ <updated>2016-10-19T21:54:15+01:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Stewart Robertson</name>
@@ -17,26 +17,138 @@
    <link href="http://localhost:4000/2016/10/15/D3-Network-Diagrams-in-F/"/>
    <updated>2016-10-15T00:00:00+01:00</updated>
    <id>http://localhost:4000/2016/10/15/D3-Network-Diagrams-in-F#</id>
-   <content type="html">&lt;h2&gt;Sub header&lt;/h2&gt;
-&lt;h3&gt;Sub Sub header&lt;/h3&gt;
-&lt;h4&gt;Sub Sub Sub header&lt;/h4&gt;
-&lt;p&gt;If you prefer to use F# Formatting tools via the command line, you can use the &lt;code&gt;FSharp.Formatting.CommandTool&lt;/code&gt; package, which includes an executable &lt;code&gt;fsformatting.exe&lt;/code&gt;
-that gives you access to the most important functionality via a simple command line interface. This might be a good idea if you prefer to run F# Formatting as a
-separate process, e.g. for resource management reasons.&lt;/p&gt;
-&lt;table class=&quot;pre&quot;&gt;&lt;tr&gt;&lt;td class=&quot;lines&quot;&gt;&lt;pre class=&quot;fssnip&quot;&gt;&lt;span class=&quot;l&quot;&gt;1: &lt;/span&gt;
-&lt;span class=&quot;l&quot;&gt;2: &lt;/span&gt;
+   <content type="html">&lt;h2&gt;D3&lt;/h2&gt;
+&lt;p&gt;Network chart example:&lt;/p&gt;
+&lt;table class=&quot;pre&quot;&gt;&lt;tr&gt;&lt;td class=&quot;lines&quot;&gt;&lt;pre class=&quot;fssnip&quot;&gt;&lt;span class=&quot;l&quot;&gt; 1: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt; 2: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt; 3: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt; 4: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt; 5: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt; 6: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt; 7: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt; 8: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt; 9: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt;10: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt;11: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt;12: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt;13: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt;14: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt;15: &lt;/span&gt;
+&lt;span class=&quot;l&quot;&gt;16: &lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&quot;snippet&quot;&gt;&lt;pre class=&quot;fssnip highlighted&quot;&gt;&lt;code lang=&quot;fsharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span onmouseout=&quot;hideTip(event, 'fs3', 4)&quot; onmouseover=&quot;showTip(event, 'fs3', 4)&quot; class=&quot;i&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span onmouseout=&quot;hideTip(event, 'fs4', 5)&quot; onmouseover=&quot;showTip(event, 'fs4', 5)&quot; class=&quot;i&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span onmouseout=&quot;hideTip(event, 'fs3', 6)&quot; onmouseover=&quot;showTip(event, 'fs3', 6)&quot; class=&quot;i&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;3&lt;/span&gt;;
+&lt;td class=&quot;snippet&quot;&gt;&lt;pre class=&quot;fssnip highlighted&quot;&gt;&lt;code lang=&quot;fsharp&quot;&gt;&lt;span class=&quot;c&quot;&gt;//open XPlot.D3&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span onmouseout=&quot;hideTip(event, 'fs5', 6)&quot; onmouseover=&quot;showTip(event, 'fs5', 6)&quot; class=&quot;i&quot;&gt;edges&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+    [   &lt;span class=&quot;s&quot;&gt;&amp;quot;blog1&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&amp;quot;content2&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;content2&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&amp;quot;content1&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;content1&amp;quot;&lt;/span&gt;, &lt;span class=&quot;s&quot;&gt;&amp;quot;blog1&amp;quot;&lt;/span&gt;]
+&lt;span onmouseout=&quot;hideTip(event, 'fs5', 7)&quot; onmouseover=&quot;showTip(event, 'fs5', 7)&quot; class=&quot;i&quot;&gt;edges&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&amp;gt;&lt;/span&gt; &lt;span onmouseout=&quot;hideTip(event, 'fs6', 8)&quot; onmouseover=&quot;showTip(event, 'fs6', 8)&quot; class=&quot;t&quot;&gt;Chart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span onmouseout=&quot;hideTip(event, 'fs7', 9)&quot; onmouseover=&quot;showTip(event, 'fs7', 9)&quot; class=&quot;f&quot;&gt;ForceLayout&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&amp;gt;&lt;/span&gt; &lt;span onmouseout=&quot;hideTip(event, 'fs6', 10)&quot; onmouseover=&quot;showTip(event, 'fs6', 10)&quot; class=&quot;t&quot;&gt;Chart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span onmouseout=&quot;hideTip(event, 'fs8', 11)&quot; onmouseover=&quot;showTip(event, 'fs8', 11)&quot; class=&quot;f&quot;&gt;WithHeight&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;300&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&amp;gt;&lt;/span&gt; &lt;span onmouseout=&quot;hideTip(event, 'fs6', 12)&quot; onmouseover=&quot;showTip(event, 'fs6', 12)&quot; class=&quot;t&quot;&gt;Chart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span onmouseout=&quot;hideTip(event, 'fs9', 13)&quot; onmouseover=&quot;showTip(event, 'fs9', 13)&quot; class=&quot;f&quot;&gt;WithWidth&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;400&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&amp;gt;&lt;/span&gt; &lt;span onmouseout=&quot;hideTip(event, 'fs6', 14)&quot; onmouseover=&quot;showTip(event, 'fs6', 14)&quot; class=&quot;t&quot;&gt;Chart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span onmouseout=&quot;hideTip(event, 'fs10', 15)&quot; onmouseover=&quot;showTip(event, 'fs10', 15)&quot; class=&quot;f&quot;&gt;WithGravity&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;2.5&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&amp;gt;&lt;/span&gt; &lt;span onmouseout=&quot;hideTip(event, 'fs6', 16)&quot; onmouseover=&quot;showTip(event, 'fs6', 16)&quot; class=&quot;t&quot;&gt;Chart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span onmouseout=&quot;hideTip(event, 'fs11', 17)&quot; onmouseover=&quot;showTip(event, 'fs11', 17)&quot; class=&quot;f&quot;&gt;WithEdgeOptions&lt;/span&gt; (&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span onmouseout=&quot;hideTip(event, 'fs12', 18)&quot; onmouseover=&quot;showTip(event, 'fs12', 18)&quot; class=&quot;i&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;-&amp;gt;&lt;/span&gt;
+{
+    &lt;span class=&quot;i&quot;&gt;Stroke&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; {&lt;span class=&quot;i&quot;&gt;Red&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;20uy&lt;/span&gt;; &lt;span class=&quot;i&quot;&gt;Blue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;20uy&lt;/span&gt;; &lt;span class=&quot;i&quot;&gt;Green&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;20uy&lt;/span&gt;;}
+    &lt;span class=&quot;i&quot;&gt;StrokeWidth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;2.0&lt;/span&gt;
+    &lt;span class=&quot;i&quot;&gt;Distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;250.0&lt;/span&gt;
+})
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;
+&lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;meta charset=&quot;UTF-8&quot;&gt;
+                    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+                    &lt;title&gt;D3 Chart&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div id=&quot;d3261b3dbd07bb46518f2befd1160a451e&quot; style=&quot;width: 400px; height: 300px;&quot;&gt;&lt;/div&gt;
+                    &lt;script src=&quot;http://d3js.org/d3.v3.min.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot;&gt;
+                        
+                        // set a width and height for our SVG
+        var width = 400,
+            height = 300;
+        
+        // Define the nodes to be drawn
+        var nodes = [{&quot;Name&quot;:&quot;content2&quot;},{&quot;Name&quot;:&quot;content1&quot;},{&quot;Name&quot;:&quot;blog1&quot;}];
+
+        var links = [{&quot;source&quot;:2,&quot;target&quot;:0},{&quot;source&quot;:0,&quot;target&quot;:1},{&quot;source&quot;:1,&quot;target&quot;:2}]
+        
+        // Add a SVG to the body for our graph
+        var svg = d3.select('#d3261b3dbd07bb46518f2befd1160a451e').append('svg')
+            .attr('width', width)
+            .attr('height', height);
+
+        var linkStyles = [{&quot;StrokeHex&quot;:&quot;#141414&quot;,&quot;StrokeWidth&quot;:&quot;2.000000px&quot;,&quot;Distance&quot;:250.0},{&quot;StrokeHex&quot;:&quot;#141414&quot;,&quot;StrokeWidth&quot;:&quot;2.000000px&quot;,&quot;Distance&quot;:250.0},{&quot;StrokeHex&quot;:&quot;#141414&quot;,&quot;StrokeWidth&quot;:&quot;2.000000px&quot;,&quot;Distance&quot;:250.0}]
+
+        var link = svg.selectAll('.link')
+            .data(links)
+            .enter().append('line')
+            .style('stroke',function(d,i) { return linkStyles[i]['StrokeHex']; })
+            .style('stroke-width', function(d,i) { return linkStyles[i]['StrokeWidth']; })
+            .attr('class', 'link');
+
+        var nodeStyles = [{&quot;FillHex&quot;:&quot;#C8C8C8&quot;,&quot;StrokeHex&quot;:&quot;#646464&quot;,&quot;StrokeWidth&quot;:&quot;2.000000px&quot;,&quot;RadiusScale&quot;:1.0},{&quot;FillHex&quot;:&quot;#C8C8C8&quot;,&quot;StrokeHex&quot;:&quot;#646464&quot;,&quot;StrokeWidth&quot;:&quot;2.000000px&quot;,&quot;RadiusScale&quot;:1.0},{&quot;FillHex&quot;:&quot;#C8C8C8&quot;,&quot;StrokeHex&quot;:&quot;#646464&quot;,&quot;StrokeWidth&quot;:&quot;2.000000px&quot;,&quot;RadiusScale&quot;:1.0}]
+
+        var radius = width / (nodes.length * 7);
+
+        // Now it's the nodes turn. Each node is drawn as a circle.
+        var node = svg.selectAll('.node')
+            .data(nodes)
+            .enter().append('circle')
+            .attr('class', 'node')
+            .style('stroke',function(d,i) { return nodeStyles[i]['StrokeHex']; })
+            .style('stroke-width',function(d,i) { return nodeStyles[i]['StrokeWidth']; })
+            .style('fill',function(d,i) { return nodeStyles[i]['FillHex']; })
+            .attr('cx', function(d,i) { return (i+1)*(width/4); }) //relative position
+            .attr('cy', function(d,i) { return height/2; }) //relative position
+            .attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; }); 
+
+        function tick(e) {
+                node.attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; })
+                    .attr('cx', function(d) { return d.x; })
+                    .attr('cy', function(d) { return d.y; })
+                    .call(force.drag) //let them be dragged around
+                    ;
+            
+                link.attr('x1', function(d) { return d.source.x; })
+                    .attr('y1', function(d) { return d.source.y; })
+                    .attr('x2', function(d) { return d.target.x; })
+                    .attr('y2', function(d) { return d.target.y; });
+            }
 
 
-&lt;div class=&quot;tip&quot; id=&quot;fs1&quot;&gt;module Blog&lt;/div&gt;
-&lt;div class=&quot;tip&quot; id=&quot;fs2&quot;&gt;val frontmatter : FrontMatter&lt;br /&gt;&lt;br /&gt;Full name: 2016-10-15-D3-Network-Diagrams-in-F#.frontmatter&lt;/div&gt;
-&lt;div class=&quot;tip&quot; id=&quot;fs3&quot;&gt;val x : int&lt;br /&gt;&lt;br /&gt;Full name: 2016-10-15-D3-Network-Diagrams-in-F#.x&lt;/div&gt;
-&lt;div class=&quot;tip&quot; id=&quot;fs4&quot;&gt;val y : int&lt;br /&gt;&lt;br /&gt;Full name: 2016-10-15-D3-Network-Diagrams-in-F#.y&lt;/div&gt;
+        // create the force layout graph
+        var force = d3.layout.force()
+            .size([width, height])
+            .nodes(nodes)
+            .links(links)
+            .gravity(2.5)
+            .on(&quot;tick&quot;, tick)
+            .linkDistance( function (d,i) {
+                return linkStyles[i]['Distance'];
+            })
+            .linkStrength(1)
+            .start();
+                    &lt;/script&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;
+
+
+&lt;div class=&quot;tip&quot; id=&quot;fs1&quot;&gt;namespace XPlot&lt;/div&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs2&quot;&gt;namespace XPlot.D3&lt;/div&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs3&quot;&gt;module Blog&lt;/div&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs4&quot;&gt;val frontmatter : FrontMatter&lt;br /&gt;&lt;br /&gt;Full name: 2016-10-15-D3-Network-Diagrams-in-F#.frontmatter&lt;/div&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs5&quot;&gt;val edges : (string * string) list&lt;br /&gt;&lt;br /&gt;Full name: 2016-10-15-D3-Network-Diagrams-in-F#.edges&lt;/div&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs6&quot;&gt;type Chart =&lt;br /&gt;&amp;#160;&amp;#160;static member Create : edges:seq&amp;lt;string * string&amp;gt; -&amp;gt; ForceLayoutChart&lt;br /&gt;&amp;#160;&amp;#160;static member Create : nodes:seq&amp;lt;Node&amp;gt; -&amp;gt; ForceLayoutChart&lt;br /&gt;&amp;#160;&amp;#160;static member ForceLayout : edges:seq&amp;lt;string * string&amp;gt; -&amp;gt; ForceLayoutChart&lt;br /&gt;&amp;#160;&amp;#160;static member ForceLayout : nodes:seq&amp;lt;Node&amp;gt; -&amp;gt; ForceLayoutChart&lt;br /&gt;&amp;#160;&amp;#160;static member Show : chart:ForceLayoutChart -&amp;gt; unit&lt;br /&gt;&amp;#160;&amp;#160;static member WithEdgeOptions : edgeOptions:(Edge -&amp;gt; EdgeOptions) -&amp;gt; chart:ForceLayoutChart -&amp;gt; ForceLayoutChart&lt;br /&gt;&amp;#160;&amp;#160;static member WithGravity : gravity:float -&amp;gt; chart:ForceLayoutChart -&amp;gt; ForceLayoutChart&lt;br /&gt;&amp;#160;&amp;#160;static member WithHeight : height:int -&amp;gt; chart:ForceLayoutChart -&amp;gt; ForceLayoutChart&lt;br /&gt;&amp;#160;&amp;#160;static member WithNodeOptions : nodeOptions:(Node -&amp;gt; NodeOptions) -&amp;gt; chart:ForceLayoutChart -&amp;gt; ForceLayoutChart&lt;br /&gt;&amp;#160;&amp;#160;static member WithWidth : width:int -&amp;gt; chart:ForceLayoutChart -&amp;gt; ForceLayoutChart&lt;br /&gt;&lt;br /&gt;Full name: XPlot.D3.Chart&lt;/div&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs7&quot;&gt;static member Chart.ForceLayout : edges:seq&amp;lt;string * string&amp;gt; -&amp;gt; ForceLayoutChart&lt;br /&gt;static member Chart.ForceLayout : nodes:seq&amp;lt;Node&amp;gt; -&amp;gt; ForceLayoutChart&lt;/div&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs8&quot;&gt;static member Chart.WithHeight : height:int -&amp;gt; chart:ForceLayoutChart -&amp;gt; ForceLayoutChart&lt;/div&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs9&quot;&gt;static member Chart.WithWidth : width:int -&amp;gt; chart:ForceLayoutChart -&amp;gt; ForceLayoutChart&lt;/div&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs10&quot;&gt;static member Chart.WithGravity : gravity:float -&amp;gt; chart:ForceLayoutChart -&amp;gt; ForceLayoutChart&lt;/div&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs11&quot;&gt;static member Chart.WithEdgeOptions : edgeOptions:(Edge -&amp;gt; EdgeOptions) -&amp;gt; chart:ForceLayoutChart -&amp;gt; ForceLayoutChart&lt;/div&gt;
+&lt;div class=&quot;tip&quot; id=&quot;fs12&quot;&gt;val e : Edge&lt;/div&gt;
 </content>
  </entry>
  

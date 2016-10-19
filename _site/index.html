@@ -94,26 +94,138 @@
 
     <span class="post-date">15 Oct 2016</span>
 
-    <h2>Sub header</h2>
-<h3>Sub Sub header</h3>
-<h4>Sub Sub Sub header</h4>
-<p>If you prefer to use F# Formatting tools via the command line, you can use the <code>FSharp.Formatting.CommandTool</code> package, which includes an executable <code>fsformatting.exe</code>
-that gives you access to the most important functionality via a simple command line interface. This might be a good idea if you prefer to run F# Formatting as a
-separate process, e.g. for resource management reasons.</p>
-<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
-<span class="l">2: </span>
+    <h2>D3</h2>
+<p>Network chart example:</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="i">x</span> <span class="o">=</span> <span class="n">1</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs4', 5)" onmouseover="showTip(event, 'fs4', 5)" class="i">y</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs3', 6)" onmouseover="showTip(event, 'fs3', 6)" class="i">x</span> <span class="o">+</span> <span class="n">3</span>;
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="c">//open XPlot.D3</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs5', 6)" onmouseover="showTip(event, 'fs5', 6)" class="i">edges</span> <span class="o">=</span> 
+    [   <span class="s">&quot;blog1&quot;</span>, <span class="s">&quot;content2&quot;</span>
+        <span class="s">&quot;content2&quot;</span>, <span class="s">&quot;content1&quot;</span>
+        <span class="s">&quot;content1&quot;</span>, <span class="s">&quot;blog1&quot;</span>]
+<span onmouseout="hideTip(event, 'fs5', 7)" onmouseover="showTip(event, 'fs5', 7)" class="i">edges</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs6', 8)" onmouseover="showTip(event, 'fs6', 8)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 9)" onmouseover="showTip(event, 'fs7', 9)" class="f">ForceLayout</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs6', 10)" onmouseover="showTip(event, 'fs6', 10)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 11)" onmouseover="showTip(event, 'fs8', 11)" class="f">WithHeight</span> <span class="n">300</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs6', 12)" onmouseover="showTip(event, 'fs6', 12)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 13)" onmouseover="showTip(event, 'fs9', 13)" class="f">WithWidth</span> <span class="n">400</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs6', 14)" onmouseover="showTip(event, 'fs6', 14)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 15)" onmouseover="showTip(event, 'fs10', 15)" class="f">WithGravity</span> <span class="n">2.5</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs6', 16)" onmouseover="showTip(event, 'fs6', 16)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 17)" onmouseover="showTip(event, 'fs11', 17)" class="f">WithEdgeOptions</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs12', 18)" onmouseover="showTip(event, 'fs12', 18)" class="i">e</span> <span class="k">-&gt;</span>
+{
+    <span class="i">Stroke</span> <span class="o">=</span> {<span class="i">Red</span> <span class="o">=</span> <span class="n">20uy</span>; <span class="i">Blue</span> <span class="o">=</span> <span class="n">20uy</span>; <span class="i">Green</span> <span class="o">=</span> <span class="n">20uy</span>;}
+    <span class="i">StrokeWidth</span> <span class="o">=</span> <span class="n">2.0</span>
+    <span class="i">Distance</span> <span class="o">=</span> <span class="n">250.0</span>
+})
 </code></pre></td>
 </tr>
 </table>
+<!DOCTYPE html>
+            <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                    <title>D3 Chart</title>
+                </head>
+                <body>
+                    <div id="d3261b3dbd07bb46518f2befd1160a451e" style="width: 400px; height: 300px;"></div>
+                    <script src="http://d3js.org/d3.v3.min.js"></script>
+                    <script type="text/javascript">
+                        
+                        // set a width and height for our SVG
+        var width = 400,
+            height = 300;
+        
+        // Define the nodes to be drawn
+        var nodes = [{"Name":"content2"},{"Name":"content1"},{"Name":"blog1"}];
+
+        var links = [{"source":2,"target":0},{"source":0,"target":1},{"source":1,"target":2}]
+        
+        // Add a SVG to the body for our graph
+        var svg = d3.select('#d3261b3dbd07bb46518f2befd1160a451e').append('svg')
+            .attr('width', width)
+            .attr('height', height);
+
+        var linkStyles = [{"StrokeHex":"#141414","StrokeWidth":"2.000000px","Distance":250.0},{"StrokeHex":"#141414","StrokeWidth":"2.000000px","Distance":250.0},{"StrokeHex":"#141414","StrokeWidth":"2.000000px","Distance":250.0}]
+
+        var link = svg.selectAll('.link')
+            .data(links)
+            .enter().append('line')
+            .style('stroke',function(d,i) { return linkStyles[i]['StrokeHex']; })
+            .style('stroke-width', function(d,i) { return linkStyles[i]['StrokeWidth']; })
+            .attr('class', 'link');
+
+        var nodeStyles = [{"FillHex":"#C8C8C8","StrokeHex":"#646464","StrokeWidth":"2.000000px","RadiusScale":1.0},{"FillHex":"#C8C8C8","StrokeHex":"#646464","StrokeWidth":"2.000000px","RadiusScale":1.0},{"FillHex":"#C8C8C8","StrokeHex":"#646464","StrokeWidth":"2.000000px","RadiusScale":1.0}]
+
+        var radius = width / (nodes.length * 7);
+
+        // Now it's the nodes turn. Each node is drawn as a circle.
+        var node = svg.selectAll('.node')
+            .data(nodes)
+            .enter().append('circle')
+            .attr('class', 'node')
+            .style('stroke',function(d,i) { return nodeStyles[i]['StrokeHex']; })
+            .style('stroke-width',function(d,i) { return nodeStyles[i]['StrokeWidth']; })
+            .style('fill',function(d,i) { return nodeStyles[i]['FillHex']; })
+            .attr('cx', function(d,i) { return (i+1)*(width/4); }) //relative position
+            .attr('cy', function(d,i) { return height/2; }) //relative position
+            .attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; }); 
+
+        function tick(e) {
+                node.attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; })
+                    .attr('cx', function(d) { return d.x; })
+                    .attr('cy', function(d) { return d.y; })
+                    .call(force.drag) //let them be dragged around
+                    ;
+            
+                link.attr('x1', function(d) { return d.source.x; })
+                    .attr('y1', function(d) { return d.source.y; })
+                    .attr('x2', function(d) { return d.target.x; })
+                    .attr('y2', function(d) { return d.target.y; });
+            }
 
 
-<div class="tip" id="fs1">module Blog</div>
-<div class="tip" id="fs2">val frontmatter : FrontMatter<br /><br />Full name: 2016-10-15-D3-Network-Diagrams-in-F#.frontmatter</div>
-<div class="tip" id="fs3">val x : int<br /><br />Full name: 2016-10-15-D3-Network-Diagrams-in-F#.x</div>
-<div class="tip" id="fs4">val y : int<br /><br />Full name: 2016-10-15-D3-Network-Diagrams-in-F#.y</div>
+        // create the force layout graph
+        var force = d3.layout.force()
+            .size([width, height])
+            .nodes(nodes)
+            .links(links)
+            .gravity(2.5)
+            .on("tick", tick)
+            .linkDistance( function (d,i) {
+                return linkStyles[i]['Distance'];
+            })
+            .linkStrength(1)
+            .start();
+                    </script>
+                </body>
+            </html>
+
+
+<div class="tip" id="fs1">namespace XPlot</div>
+<div class="tip" id="fs2">namespace XPlot.D3</div>
+<div class="tip" id="fs3">module Blog</div>
+<div class="tip" id="fs4">val frontmatter : FrontMatter<br /><br />Full name: 2016-10-15-D3-Network-Diagrams-in-F#.frontmatter</div>
+<div class="tip" id="fs5">val edges : (string * string) list<br /><br />Full name: 2016-10-15-D3-Network-Diagrams-in-F#.edges</div>
+<div class="tip" id="fs6">type Chart =<br />&#160;&#160;static member Create : edges:seq&lt;string * string&gt; -&gt; ForceLayoutChart<br />&#160;&#160;static member Create : nodes:seq&lt;Node&gt; -&gt; ForceLayoutChart<br />&#160;&#160;static member ForceLayout : edges:seq&lt;string * string&gt; -&gt; ForceLayoutChart<br />&#160;&#160;static member ForceLayout : nodes:seq&lt;Node&gt; -&gt; ForceLayoutChart<br />&#160;&#160;static member Show : chart:ForceLayoutChart -&gt; unit<br />&#160;&#160;static member WithEdgeOptions : edgeOptions:(Edge -&gt; EdgeOptions) -&gt; chart:ForceLayoutChart -&gt; ForceLayoutChart<br />&#160;&#160;static member WithGravity : gravity:float -&gt; chart:ForceLayoutChart -&gt; ForceLayoutChart<br />&#160;&#160;static member WithHeight : height:int -&gt; chart:ForceLayoutChart -&gt; ForceLayoutChart<br />&#160;&#160;static member WithNodeOptions : nodeOptions:(Node -&gt; NodeOptions) -&gt; chart:ForceLayoutChart -&gt; ForceLayoutChart<br />&#160;&#160;static member WithWidth : width:int -&gt; chart:ForceLayoutChart -&gt; ForceLayoutChart<br /><br />Full name: XPlot.D3.Chart</div>
+<div class="tip" id="fs7">static member Chart.ForceLayout : edges:seq&lt;string * string&gt; -&gt; ForceLayoutChart<br />static member Chart.ForceLayout : nodes:seq&lt;Node&gt; -&gt; ForceLayoutChart</div>
+<div class="tip" id="fs8">static member Chart.WithHeight : height:int -&gt; chart:ForceLayoutChart -&gt; ForceLayoutChart</div>
+<div class="tip" id="fs9">static member Chart.WithWidth : width:int -&gt; chart:ForceLayoutChart -&gt; ForceLayoutChart</div>
+<div class="tip" id="fs10">static member Chart.WithGravity : gravity:float -&gt; chart:ForceLayoutChart -&gt; ForceLayoutChart</div>
+<div class="tip" id="fs11">static member Chart.WithEdgeOptions : edgeOptions:(Edge -&gt; EdgeOptions) -&gt; chart:ForceLayoutChart -&gt; ForceLayoutChart</div>
+<div class="tip" id="fs12">val e : Edge</div>
 
   </div>
   

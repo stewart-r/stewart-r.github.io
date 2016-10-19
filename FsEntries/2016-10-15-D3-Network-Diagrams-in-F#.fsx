@@ -1,6 +1,11 @@
 (*** hide ***)
 #load "../code/types.fsx"
 #load "../packages/FsLab/FsLab.fsx"
+#I "../../XPlot/bin"
+#r "XPlot.D3.dll"
+
+open XPlot.D3
+
 open Blog
 let frontmatter ={
     Title = "D3 Network Graphs in F#"
@@ -10,15 +15,27 @@ frontmatter
 (*** include-value:frontmatter ***)
 
 (**
-## Sub header
-### Sub Sub header
-#### Sub Sub Sub header
-
-If you prefer to use F# Formatting tools via the command line, you can use the `FSharp.Formatting.CommandTool` package, which includes an executable `fsformatting.exe` 
-that gives you access to the most important functionality via a simple command line interface. This might be a good idea if you prefer to run F# Formatting as a 
-separate process, e.g. for resource management reasons.
+##D3
+Network chart example:
 *)
+(*** define-output:netchart ***)
+let edges = 
+    [   "blog1", "content2"
+        "content2", "content1"
+        "content1", "blog1"]
+edges
+|> Chart.ForceLayout
+|> Chart.WithHeight 300
+|> Chart.WithWidth 400
+|> Chart.WithGravity 2.5
+|> Chart.WithEdgeOptions (fun e ->
+{
+    Stroke = {Red = 20uy; Blue = 20uy; Green = 20uy;}
+    StrokeWidth = 2.0
+    Distance = 250.0
+})
+(*** include-it:netchart ***)
 
-let x = 1
-let y = x + 3;
+
+
 

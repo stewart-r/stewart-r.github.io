@@ -21,7 +21,7 @@ Target "Clean" (fun _ ->
 )
 
 let generateHtml path (doc:LiterateDocument)= 
-    let html = sprintf "%s %s" (Literate.WriteHtml(doc)) doc.FormattedTips
+    let html = sprintf "%s %s" (Literate.WriteHtml(doc,lineNumbers=true)) doc.FormattedTips
     File.WriteAllText(path, html)
 
 let getNewFname oldFname = 
@@ -43,7 +43,14 @@ layout: %s
 ---"""                  title layout)
             Some [InlineBlock(raw)]
 
-        else None)
+        else 
+            let genMethod = ty.GetMethod("GetHtml")
+            match genMethod with
+            | null -> None
+            | _ -> 
+                let raw = genMethod.Invoke(o,[||]) :?> string
+                Some[InlineBlock(raw)]
+    )
     ret
 
 Target "BuildPosts" (fun _ ->
